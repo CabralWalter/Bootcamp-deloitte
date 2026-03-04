@@ -12,4 +12,11 @@ public class Product {
         System.out.println("Preço: " + price);
         System.out.println("Quantidade: " + quantity);
     }
+
+    void updateData(int newId, String newName, double newPrice, int newQuantity) {
+        id = newId;
+        name = newName;
+        price = newPrice;
+        quantity = newQuantity;
+    }
 }

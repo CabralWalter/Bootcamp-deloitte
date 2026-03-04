@@ -8,11 +8,12 @@ public class Main {
         Product product = new Product();
         int opcao = 0;
 
-        while (opcao != 3) {
+        while (opcao != 4) {
 
             System.out.println("\n1 - Cadastrar Produto");
             System.out.println("2 - Exibir Produto");
-            System.out.println("3 - Sair");
+            System.out.println("3 - Atualizar Produto");
+            System.out.println("4 - Sair");
             System.out.print("Escolha uma opção: ");
 
             opcao = sc.nextInt();
@@ -33,6 +34,8 @@ public class Main {
 
                     System.out.print("Insira quantidade em estoque: ");
                     product.quantity = sc.nextInt();
+
+                    System.out.println("Produto cadastrado com sucesso!");
                     break;
 
                 case 2:
@@ -40,6 +43,24 @@ public class Main {
                     break;
 
                 case 3:
+                    System.out.print("Novo id: ");
+                    int newId = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.print("Novo nome: ");
+                    String newName = sc.nextLine();
+
+                    System.out.print("Novo preço: ");
+                    double newPrice = sc.nextDouble();
+
+                    System.out.print("Nova quantidade: ");
+                    int newQuantity = sc.nextInt();
+
+                    product.updateData(newId, newName, newPrice, newQuantity);
+                    System.out.println("Produto atualizado com sucesso!");
+                    break;
+
+                case 4:
                     System.out.println("Encerrando o sistema...");
                     break;
 
