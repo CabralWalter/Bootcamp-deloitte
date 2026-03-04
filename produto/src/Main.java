@@ -6,37 +6,46 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         Product product = new Product();
+        int opcao = 0;
 
-        System.out.println("1 - Cadastrar Produto");
-        System.out.println("2 - Exibir Produto");
-        System.out.print("Escolha uma opção: ");
-        int opcao = sc.nextInt();
-        sc.nextLine();
+        while (opcao != 3) {
 
-        switch (opcao) {
+            System.out.println("\n1 - Cadastrar Produto");
+            System.out.println("2 - Exibir Produto");
+            System.out.println("3 - Sair");
+            System.out.print("Escolha uma opção: ");
 
-            case 1:
-                System.out.print("Insira o id do produto: ");
-                product.id = sc.nextInt();
-                sc.nextLine();
+            opcao = sc.nextInt();
+            sc.nextLine();
 
-                System.out.print("Insira o nome do produto: ");
-                product.name = sc.nextLine();
+            switch (opcao) {
 
-                System.out.print("Insira o preço do produto: ");
-                product.price = sc.nextDouble();
+                case 1:
+                    System.out.print("Insira o id do produto: ");
+                    product.id = sc.nextInt();
+                    sc.nextLine();
 
-                System.out.print("Insira quantidade em estoque: ");
-                product.quantity = sc.nextInt();
+                    System.out.print("Insira o nome do produto: ");
+                    product.name = sc.nextLine();
 
-                break;
+                    System.out.print("Insira o preço do produto: ");
+                    product.price = sc.nextDouble();
 
-            case 2:
-                product.showData();
-                break;
+                    System.out.print("Insira quantidade em estoque: ");
+                    product.quantity = sc.nextInt();
+                    break;
 
-            default:
-                System.out.println("Opção inválida.");
+                case 2:
+                    product.showData();
+                    break;
+
+                case 3:
+                    System.out.println("Encerrando o sistema...");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida.");
+            }
         }
 
         sc.close();
