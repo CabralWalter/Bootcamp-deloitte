@@ -4,22 +4,22 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        Produto produto = new Produto();
+        Product product = new Product();
 
-        System.out.print("Insira o Id do produto: ");
-        produto.id = sc.nextInt();
+        System.out.print("Insira o id do produto: ");
+        product.id = sc.nextInt();
         sc.nextLine();
 
         System.out.print("Insira o nome do produto: ");
-        produto.nome = sc.nextLine();
+        product.name = sc.nextLine();
 
         System.out.print("Insira o preço do produto: ");
-        produto.preco = sc.nextDouble();
+        product.price = sc.nextDouble();
 
-        System.out.print("Insira quantos produtos tem no estoque: ");
-        produto.quantidade = sc.nextInt();
+        System.out.print("Insira quantidade em estoque:");
+        product.quantity = sc.nextInt();
 
-        produto.exibirDados();
+        product.showData();
 
         sc.close();
     }
