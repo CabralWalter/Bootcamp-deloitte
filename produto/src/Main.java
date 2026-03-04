@@ -8,12 +8,13 @@ public class Main {
         Product product = new Product();
         int opcao = 0;
 
-        while (opcao != 4) {
+        while (opcao != 5) {
 
             System.out.println("\n1 - Cadastrar Produto");
             System.out.println("2 - Exibir Produto");
             System.out.println("3 - Atualizar Produto");
-            System.out.println("4 - Sair");
+            System.out.println("4 - Excluir Produto");
+            System.out.println("5 - Sair");
             System.out.print("Escolha uma opção: ");
 
             opcao = sc.nextInt();
@@ -61,6 +62,11 @@ public class Main {
                     break;
 
                 case 4:
+                    product.deleteData();
+                    System.out.println("Produto excluído com sucesso!");
+                    break;
+
+                case 5:
                     System.out.println("Encerrando o sistema...");
                     break;
 

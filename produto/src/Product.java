@@ -19,4 +19,11 @@ public class Product {
         price = newPrice;
         quantity = newQuantity;
     }
+
+    void deleteData() {
+        id = 0;
+        name = null;
+        price = 0.0;
+        quantity = 0;
+    }
 }
