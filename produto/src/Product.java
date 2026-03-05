@@ -5,6 +5,13 @@ public class Product {
     double price;
     int quantity;
 
+    Product(int id, String name, double price, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
     void showData() {
         System.out.println("\n--- Dados do Produto ---");
         System.out.println("ID: " + id);
