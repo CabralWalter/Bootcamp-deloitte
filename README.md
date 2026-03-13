@@ -167,6 +167,13 @@ DELETE /products/1
 
 Para executar os testes unitários do projeto:
 
+Acesse a branch "tests"
+ 
+```bash
+git checkout tests
+```
+logo em seguida
+
 ```bash
 mvn test
 ```
