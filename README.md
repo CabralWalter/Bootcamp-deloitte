@@ -69,7 +69,7 @@ http://localhost:8080
 
 ## 🗄 Banco de Dados H2
 
-O projeto utiliza o **H2 Database**, que é um banco de dados em memória utilizado frequentemente para desenvolvimento e testes.
+O projeto utiliza o **H2 Database**, que é um banco de dados em memória utilizado para desenvolvimento e testes.
 
 ### Acessar o console do H2
 
@@ -85,8 +85,8 @@ Utilize os seguintes dados:
 
 ```
 JDBC URL: jdbc:h2:mem:testdb
-User Name: sa
-Password: (deixe em branco)
+User Name: root
+Password: ademar123
 ```
 
 Após conectar, será possível visualizar as tabelas e executar consultas SQL diretamente pelo navegador.
